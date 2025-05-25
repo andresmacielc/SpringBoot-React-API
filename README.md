@@ -1,63 +1,63 @@
----
-
 # SpringBoot-React-API
-
-> Full-Stack CRUD Application combining a Spring Boot RESTful backend with a React frontend.
-
-![Status Badge](https://img.shields.io/badge/status-finished-green) ![Version](https://img.shields.io/badge/version-1.0.0-blue)
-
----
-
-## 📖 Índice
-
-1. [Descripción](#descripción)
-2. [Características](#-características)
-3. [Tecnologías](#-tecnologías)
-4. [Instalación](#-instalación)
-5. [Uso](#-uso)
-6. [Estructura de Proyecto](#-estructura-de-proyecto)
-7. [Contribuir](#-contribuir)
-8. [Licencia](#-licencia)
-
----
 
 ## 📄 Descripción
 
-Aplicación full-stack que integra un backend en Spring Boot con un frontend en React para operaciones CRUD.
+Proyecto de ejemplo que integra un **API REST** implementado con Spring Boot (Java) en el backend y una **SPA** construida con React en el frontend.
 
-## 🚀 Características
+## 🚀 Tecnologías
 
-- CRUD operations for managing data via REST endpoints
-- Frontend built with React, React Router, and Axios
-- Backend using Spring Boot, Spring Data JPA, and H2/PostgreSQL
-- CORS configuration to enable frontend–backend communication
-- Exception handling and validation on the server side
+* Backend: Spring Boot, Spring Web, Spring Data JPA, H2/PostgreSQL
+* Frontend: React, Axios, React Router
+* Build Tools: Maven (backend), npm/yarn (frontend)
 
-## 🛠️ Tecnologías
+## 🛠️ Características
 
-- **Backend:** Java, Spring Boot, Spring Web, Spring Data JPA, Hibernate
-- **Frontend:** React, React Router, Axios, Bootstrap/Tailwind CSS
-- **BD:** H2 (in-memory) or PostgreSQL
+* CRUD completo de recursos a través de endpoints REST
+* Comunicación cliente-servidor usando JSON
+* Ejemplo de autenticación básica (opcional)
+* Configuración de base de datos en memoria o relacional
+
+## 🚀 Requisitos previos
+
+* Java 11 o superior
+* Maven 3+
+* Node.js 14+ y npm/yarn
 
 ## ⚙️ Instalación
 
-```bash
-# Clonar el repositorio
- git clone https://github.com/andresmacielc/SpringBoot-React-API.git
- cd SpringBoot-React-API
+1. Clona el repositorio:
 
-# Backend\ n cd backend && mvn clean install && mvn spring-boot:run
+   ```bash
+   git clone https://github.com/andresmacielc/SpringBoot-React-API.git
+   cd SpringBoot-React-API
+   ```
+2. Inicia el backend:
 
-# Frontend\ n cd frontend && npm install && npm start
+   ```bash
+   cd backend
+   mvn spring-boot:run
+   ```
+3. Inicia el frontend en otra terminal:
 
-```
-## 🚨 Uso
+   ```bash
+   cd frontend
+   npm install   # o yarn install
+   npm start     # o yarn start
+   ```
+4. Accede a la aplicación en `http://localhost:3000` y a la API en `http://localhost:8080/api`
 
-Accede al frontend en http://localhost:3000
+## ⚙️ Configuración
 
-Las APIs están en http://localhost:8080
+* Variables de entorno en `backend/src/main/resources/application.properties`:
 
-## 📁 Estructura de Proyecto
+  ```properties
+  spring.datasource.url=jdbc:h2:mem:testdb
+  spring.datasource.username=sa
+  spring.datasource.password=
+  ```
+* Frontend: ajusta la URL base de la API en `frontend/src/config.js`
+
+📁 Estructura de Proyecto
 
 SpringBoot-React-API/
 ├── backend/           # Spring Boot application
@@ -67,19 +67,22 @@ SpringBoot-React-API/
     ├── src/
     └── package.json
 
-## 🤝 Contribuir
+## 🚨 Uso
 
-### Fork
+* Navega y crea, edita o elimina recursos desde la interfaz React.
+* Consulta manualmente los endpoints con Postman o curl:
 
-Crear rama: git checkout -b feature/xyz
+  ```bash
+  curl http://localhost:8080/api/items
+  ```
 
-Commit: git commit -m "feat: Add xyz"
+## 🤝 Contribuciones
 
-Push: git push origin feature/xyz
-
-Abrir Pull Request
+1. Haz un Fork del repositorio.
+2. Crea una rama (`git checkout -b feature/nueva-funcion`).
+3. Realiza tus cambios y commitea (`git commit -m "Add nueva función"`).
+4. Envía un Pull Request.
 
 ## 📝 Licencia
 
-MIT License. Ver LICENSE.
-
+Este proyecto está bajo la licencia MIT.
