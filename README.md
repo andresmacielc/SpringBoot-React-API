@@ -57,15 +57,17 @@ Proyecto de ejemplo que integra un **API REST** implementado con Spring Boot (Ja
   ```
 * Frontend: ajusta la URL base de la API en `frontend/src/config.js`
 
-📁 Estructura de Proyecto
+📁 **Estructura de Proyecto**
 
 SpringBoot-React-API/
-├── backend/           # Spring Boot application
-│   ├── src/main/java/...
-│   └── pom.xml
-└── frontend/          # React application
-    ├── src/
-    └── package.json
+├── backend/ # Spring Boot application
+│ ├── src/
+│ │ └── main/
+│ │ └── java/...
+│ └── pom.xml
+└── frontend/ # React application
+├── src/
+└── package.json
 
 ## 🚨 Uso
 
